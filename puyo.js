@@ -143,7 +143,7 @@ document.addEventListener("keydown", e => {
   } else if (e.key === "Enter") {
     // Enterキーの動作（例: 即落下など）
     drop();
-  } else if (e.key === "Shift") {
+  } else if (e.key === "B") {
     rotate();    // 回転
   }
 });
@@ -151,4 +151,5 @@ document.addEventListener("keydown", e => {
 // 自動落下
 setInterval(drop,500);
 drawBoard();
+
 
