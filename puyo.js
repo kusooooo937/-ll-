@@ -133,13 +133,22 @@ function drawNext(){
 }
 
 // キー操作
-document.addEventListener("keydown",e=>{
-  if(e.key==="ArrowLeft") move(-1,0);
-  else if(e.key==="ArrowRight") move(1,0);
-  else if(e.key==="ArrowDown") move(0,1);
-  else if(e.key==="ArrowUp") rotate();
+document.addEventListener("keydown", e => {
+  if (e.key === "ArrowLeft") {
+    move(-1, 0); // 左移動
+  } else if (e.key === "ArrowRight") {
+    move(1, 0);  // 右移動
+  } else if (e.key === "ArrowDown") {
+    move(0, 1);  // 下に移動
+  } else if (e.key === "Enter") {
+    // Enterキーの動作（例: 即落下など）
+    drop();
+  } else if (e.key === "Shift") {
+    rotate();    // 回転
+  }
 });
 
 // 自動落下
 setInterval(drop,500);
 drawBoard();
+
